@@ -1,7 +1,7 @@
 
+import java.util.Collections;
 import java.util.List;
-
-public class LargestSum {
+ class LargestSum {
     /**
      * Get the largest possible sum that can be obtained from a pair of values in the list. A number can't be added
      * to itself, unless there are duplicates.
@@ -10,6 +10,11 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from nums.
      */
     public int bigSum(List<Integer> nums){
-        return 0;
+
+        Collections.sort(nums);
+
+        int numsSize = nums.size();
+
+        return nums.get(numsSize - 1) + nums.get(numsSize - 2);
     }
 }
