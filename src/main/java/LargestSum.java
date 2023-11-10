@@ -11,10 +11,8 @@ import java.util.List;
      */
     public int bigSum(List<Integer> nums){
 
-        Collections.sort(nums);
+        Collections.sort(nums, Collections.reverseOrder());
 
-        int numsSize = nums.size();
-
-        return nums.get(numsSize - 1) + nums.get(numsSize - 2);
+        return nums.get(0) + nums.get(1);
     }
 }
